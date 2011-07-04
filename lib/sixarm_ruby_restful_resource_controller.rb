@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 =begin rdoc
 
 = SixArm Ruby Gem: Easy Controller for RESTful resource controller
@@ -34,7 +36,7 @@ module EasyController
  #
  # Typically this is the controller model name in lowercase.
  #
- # Override this if you want page views with an atypical param key 
+ # Override this if you want page views with an atypical param key
 
  def paramkey
   return @paramkey ||= controller_model_name.downcase
@@ -63,12 +65,12 @@ module EasyController
 
  def find_before
  end
- 
+
  def find_after
  end
 
 
- 
+
  protected
 
 
@@ -134,7 +136,7 @@ module EasyController
  #
  #  show
  #
- ######################################################################  
+ ######################################################################
 
  def show(*a)
   show_before(a)
@@ -157,7 +159,7 @@ module EasyController
  #
  #  new
  #
- ######################################################################  
+ ######################################################################
 
  def new(*a)
   new_before(a)
@@ -180,7 +182,7 @@ module EasyController
  #
  #  create
  #
- ######################################################################  
+ ######################################################################
 
  def create(*a)
   create_before(*a)
@@ -203,7 +205,7 @@ module EasyController
 
  def create_after(*a)
  end
-  
+
  def create_with_params
   a = model.new(params[paramkey])
  end
@@ -212,7 +214,7 @@ module EasyController
   flash[:notice]=create_success_message(a)
   redirect_to :action => 'list'
  end
- 
+
  def create_failure(a)
   flash[:notice]=create_failure_message
  end
@@ -231,7 +233,7 @@ module EasyController
  #
  #  edit
  #
- ######################################################################  
+ ######################################################################
 
  def edit
   id = params['id']
@@ -241,13 +243,13 @@ module EasyController
    return edit_new
   else
    return edit_id(id)
-  end  
+  end
  end
 
 
  def edit_new(a=nil)
-  logger.info "+edit id=#{id}" 
-  logger.info "+edit_new" 
+  logger.info "+edit id=#{id}"
+  logger.info "+edit_new"
   a ||= model.new(params[paramkey])
   if request.post?
     logger.info "=edit_new request post id=#{a.id}"
@@ -258,20 +260,20 @@ module EasyController
     warning(:create_warning,a.to_s)
    end
   else
-   logger.info "=edit_new request get" 
+   logger.info "=edit_new request get"
   end
-   logger.info "-edit_new id=#{a.id}" 
+   logger.info "-edit_new id=#{a.id}"
   a
  end
 
- 
+
  def edit_id(id)
-   logger.info "+edit_id id=#{id}" 
+   logger.info "+edit_id id=#{id}"
   if !id then raise "id missing" end
   a = find_by_id(id)
    if !a then raise "id not found: #{id}" end
   if request.post?
-    logger.info "=edit_id request post id=#{a.id}" 
+    logger.info "=edit_id request post id=#{a.id}"
    if a.update_attributes(params[paramkey])
     notice(:update_success)
     edit_next
@@ -279,9 +281,9 @@ module EasyController
     warning(:update_warning)
    end
   else
-    logger.info "=edit_id request get id=#{a.id}" 
+    logger.info "=edit_id request get id=#{a.id}"
   end
-   logger.info "-edit_id id=#{id}" 
+   logger.info "-edit_id id=#{id}"
   a
  end
 
@@ -295,7 +297,7 @@ module EasyController
  #
  #  destroy
  #
- ######################################################################  
+ ######################################################################
 
  def destroy
   destroy_before
@@ -336,7 +338,7 @@ module EasyController
  def destroy_find(*a)
   model.find(a)
  end
-  
+
  def destroy_success
   flash[:notice]=destroy_success_message
  end
@@ -361,10 +363,10 @@ module EasyController
  #
  #  destroy many
  #
- ######################################################################  
+ ######################################################################
 
  def destroy_many(ids)
-   logger.info "+destroy ids=" + ids.join(" "); 
+   logger.info "+destroy ids=" + ids.join(" ");
    ids.each{|id| find_by_id(id).destroy }
    notice(:destroy_success, ids.join(" "))
    destroy_next
@@ -381,17 +383,17 @@ module EasyController
  #
  #  destroy ajax
  #
- ######################################################################  
+ ######################################################################
 
  def destroy_ajax
   id = params['id']
-   logger.info "+destroy_ajax id=#{id}" 
+   logger.info "+destroy_ajax id=#{id}"
   if !id then raise "id missing" end
   a = find_by_id(id)
    if !a then raise "id not found: #{id}" end
   a.destroy
   render :text => ''
-  logger.info "-destroy_ajax" 
+  logger.info "-destroy_ajax"
  end
 
 
@@ -403,7 +405,7 @@ module EasyController
  #
  #  cloner
  #
- ######################################################################  
+ ######################################################################
 
 
  def cloner
@@ -422,13 +424,13 @@ module EasyController
  #
  #  export
  #
- ######################################################################  
+ ######################################################################
 
  def export
   send_data_to_csv(exporter_data,exporter_filename)
  end
 
- 
+
  def exporter_data
   foreign
   build=''
@@ -436,23 +438,23 @@ module EasyController
   return build
  end
 
- 
+
  def exporter_line (x)
   fields = exporter_fields(x)
   return CSV.generate_line(fields)+"\n"
  end
 
- 
+
  def exporter_fields (x)
   return x.to_a
  end
 
- 
+
  def exporter_filename
   return model.to_s.downcase
  end
 
- 
+
  def send_data_to_csv(data,filename)
   send_data data, :filename =>  "#{filename}.csv", :type => 'text/plain'
  end
