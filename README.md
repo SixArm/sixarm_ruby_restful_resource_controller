@@ -1,6 +1,7 @@
 # SixArm.com » Ruby » <br> Easy Controller for RESTful resource controller
 
-* Docs: <http://sixarm.com/sixarm_ruby_restful_resource_controller/doc>
+* Doc: <http://sixarm.com/sixarm_ruby_restful_resource_controller/doc>
+* Gem: <http://rubygems.org/gems/sixarm_ruby_>
 * Repo: <http://github.com/sixarm/sixarm_ruby_restful_resource_controller>
 * Email: Joel Parker Henderson, <joel@sixarm.com>
 
