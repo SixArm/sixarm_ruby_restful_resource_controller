@@ -42,7 +42,7 @@ To enable high security for all our gems:
 
 To install with high security:
 
-    gem install sixarm_ruby_ --test --trust-policy HighSecurity
+    gem install sixarm_ruby_ --trust-policy HighSecurity
 
 
 ## Changes
