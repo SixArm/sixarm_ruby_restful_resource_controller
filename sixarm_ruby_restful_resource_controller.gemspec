@@ -20,8 +20,6 @@ Gem::Specification.new do |s|
   s.has_rdoc          = true
 
   s.files = [
-    "README.md",
-    "LICENSE.md",
     "lib/sixarm_ruby_restful_resource_controller.rb"
   ]
 
