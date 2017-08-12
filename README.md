@@ -1,4 +1,4 @@
-# Ruby » <br> Easy Controller for RESTful resource controller
+SixArm.com → Ruby → <br> Easy Controller for RESTful resource controller
 
 * Doc: <http://sixarm.com/sixarm_ruby_restful_resource_controller/doc>
 * Gem: <http://rubygems.org/gems/sixarm_ruby_>
