@@ -1,2065 +1,520 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Module: EasyController
+  
+    &mdash; Documentation by YARD 0.9.19
+  
+</title>
 
-	<title>Module: EasyController</title>
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
 
-	<link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
 
-	<script src="./js/jquery.js" type="text/javascript"
-		charset="utf-8"></script>
-	<script src="./js/thickbox-compressed.js" type="text/javascript"
-		charset="utf-8"></script>
-	<script src="./js/quicksearch.js" type="text/javascript"
-		charset="utf-8"></script>
-	<script src="./js/darkfish.js" type="text/javascript"
-		charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8">
+  pathId = "EasyController";
+  relpath = '';
+</script>
 
-</head>
-<body class="module">
 
-	<div id="metadata">
-		<div id="file-metadata">
-			<div id="file-list-section" class="section">
-				<h3 class="section-header">In Files</h3>
-				<div class="section-body">
-					<ul>
-					
-						<li><a href="./lib/sixarm_ruby_restful_resource_controller_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
-							class="thickbox" title="lib/sixarm_ruby_restful_resource_controller.rb">lib/sixarm_ruby_restful_resource_controller.rb</a></li>
-					
-					</ul>
-				</div>
-			</div>
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
 
-			
-		</div>
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
 
-		<div id="class-metadata">
 
-			<!-- Parent Class -->
-			
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
 
-			<!-- Namespace Contents -->
-			
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index (E)</a> &raquo;
+    
+    
+    <span class="title">EasyController</span>
+  
+</div>
 
-			<!-- Method Quickref -->
-			
-			<div id="method-list-section" class="section">
-				<h3 class="section-header">Methods</h3>
-				<ul class="link-list">
-					
-					<li><a href="#M000045">#cloner</a></li>
-					
-					<li><a href="#M000021">#create</a></li>
-					
-					<li><a href="#M000023">#create_after</a></li>
-					
-					<li><a href="#M000022">#create_before</a></li>
-					
-					<li><a href="#M000026">#create_failure</a></li>
-					
-					<li><a href="#M000028">#create_failure_message</a></li>
-					
-					<li><a href="#M000025">#create_success</a></li>
-					
-					<li><a href="#M000027">#create_success_message</a></li>
-					
-					<li><a href="#M000024">#create_with_params</a></li>
-					
-					<li><a href="#M000033">#destroy</a></li>
-					
-					<li><a href="#M000043">#destroy_ajax</a></li>
-					
-					<li><a href="#M000034">#destroy_error_id_missing</a></li>
-					
-					<li><a href="#M000035">#destroy_error_id_not_found</a></li>
-					
-					<li><a href="#M000039">#destroy_failure</a></li>
-					
-					<li><a href="#M000040">#destroy_failure_message</a></li>
-					
-					<li><a href="#M000036">#destroy_find</a></li>
-					
-					<li><a href="#M000041">#destroy_many</a></li>
-					
-					<li><a href="#M000042">#destroy_next</a></li>
-					
-					<li><a href="#M000037">#destroy_success</a></li>
-					
-					<li><a href="#M000038">#destroy_success_message</a></li>
-					
-					<li><a href="#M000029">#edit</a></li>
-					
-					<li><a href="#M000031">#edit_id</a></li>
-					
-					<li><a href="#M000030">#edit_new</a></li>
-					
-					<li><a href="#M000032">#edit_next</a></li>
-					
-					<li><a href="#M000046">#export</a></li>
-					
-					<li><a href="#M000047">#exporter_data</a></li>
-					
-					<li><a href="#M000049">#exporter_fields</a></li>
-					
-					<li><a href="#M000050">#exporter_filename</a></li>
-					
-					<li><a href="#M000048">#exporter_line</a></li>
-					
-					<li><a href="#M000004">#find</a></li>
-					
-					<li><a href="#M000006">#find_after</a></li>
-					
-					<li><a href="#M000005">#find_before</a></li>
-					
-					<li><a href="#M000009">#index</a></li>
-					
-					<li><a href="#M000012">#index_after</a></li>
-					
-					<li><a href="#M000010">#index_before</a></li>
-					
-					<li><a href="#M000011">#index_objects</a></li>
-					
-					<li><a href="#M000000">#model</a></li>
-					
-					<li><a href="#M000017">#new</a></li>
-					
-					<li><a href="#M000020">#new_after</a></li>
-					
-					<li><a href="#M000018">#new_before</a></li>
-					
-					<li><a href="#M000019">#new_object</a></li>
-					
-					<li><a href="#M000007">#object</a></li>
-					
-					<li><a href="#M000008">#objects</a></li>
-					
-					<li><a href="#M000001">#paramkey</a></li>
-					
-					<li><a href="#M000051">#send_data_to_csv</a></li>
-					
-					<li><a href="#M000013">#show</a></li>
-					
-					<li><a href="#M000016">#show_after</a></li>
-					
-					<li><a href="#M000014">#show_before</a></li>
-					
-					<li><a href="#M000015">#show_object</a></li>
-					
-					<li><a href="#M000002">#single_name</a></li>
-					
-					<li><a href="#M000044">#test</a></li>
-					
-				</ul>
-			</div>
-			
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
 
-			<!-- Included Modules -->
-			
-		</div>
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
 
-		<div id="project-metadata">
-			
-			
-			<div id="fileindex-section" class="section project-section">
-				<h3 class="section-header">Files</h3>
-				<ul>
-				
-					<li class="file"><a href="./README_rdoc.html">README.rdoc</a></li>
-				
-					<li class="file"><a href="./sixarm_ruby_restful_resource_controller_gemspec.html">sixarm_ruby_restful_resource_controller.gemspec</a></li>
-				
-					<li class="file"><a href="./sixarm_ruby_restful_resource_controller_sha512_txt.html">sixarm_ruby_restful_resource_controller.sha512.txt</a></li>
-				
-				</ul>
-			</div>
-			
+      <div id="content"><h1>Module: EasyController
+  
+  
+  
+</h1>
+<div class="box_info">
+  
 
-			<div id="classindex-section" class="section project-section">
-				<h3 class="section-header">Class Index
-					<span class="search-toggle"><img src="./images/find.png"
-						height="16" width="16" alt="[+]"
-						title="show/hide quicksearch" /></span></h3>
-				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
-				<fieldset>
-					<legend>Quicksearch</legend>
-					<input type="text" name="quicksearch" value=""
-						class="quicksearch-field" />
-				</fieldset>
-				</form>
+  
+  
+  
+  
+  
 
-				<ul class="link-list">
-				
-					<li><a href="./EasyController.html">EasyController</a></li>
-				
-					<li><a href="./RestfulResourceControllerTest.html">RestfulResourceControllerTest</a></li>
-				
-				</ul>
-				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
-			</div>
+  
 
-			
-		</div>
-	</div>
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/sixarm_ruby_restful_resource_controller.rb</dd>
+  </dl>
+  
+</div>
 
-	<div id="documentation">
-		<h1 class="module">EasyController</h1>
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<h1 id="label-SixArm+Ruby+Gem-3A+Easy+Controller+for+RESTful+resource+controller">SixArm Ruby Gem: Easy Controller for RESTful resource controller</h1>
+<dl class="rdoc-list note-list"><dt>Author
+<dd>
+<p>Joel Parker Henderson, joelparkerhenderson@gmail.com</p>
+</dd><dt>Copyright
+<dd>
+<p>Copyright © 2006-2010 Joel Parker Henderson</p>
+</dd><dt>License
+<dd>
+<p>CreativeCommons License, Non-commercial Share Alike</p>
+</dd><dt>License
+<dd>
+<p>LGPL, GNU Lesser General Public License</p>
+</dd></dl>
 
-		<div id="description">
-			<h1>SixArm Ruby Gem: Easy Controller for RESTful resource controller</h1>
-<table>
-<tr><td valign="top">Author:</td><td>Joel Parker Henderson, joelparkerhenderson@gmail.com
 
-</td></tr>
-<tr><td valign="top">Copyright:</td><td>Copyright &#169; 2006-2010 Joel Parker Henderson
+  </div>
+</div>
+<div class="tags">
+  
 
-</td></tr>
-<tr><td valign="top">License:</td><td>CreativeCommons License, Non-commercial Share Alike
+</div>
 
-</td></tr>
-<tr><td valign="top">License:</td><td>LGPL, GNU Lesser General Public License
 
-</td></tr>
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#find-instance_method" title="#find (instance method)">#<strong>find</strong>(*a)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Find model records.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#find_after-instance_method" title="#find_after (instance method)">#<strong>find_after</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#find_before-instance_method" title="#find_before (instance method)">#<strong>find_before</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#model-instance_method" title="#model (instance method)">#<strong>model</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Return the controller&#39;s model.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#paramkey-instance_method" title="#paramkey (instance method)">#<strong>paramkey</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Return the controller&#39;s param key for form inputs.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#single_name-instance_method" title="#single_name (instance method)">#<strong>single_name</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="find-instance_method">
+  
+    #<strong>find</strong>(*a)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Find model records</p>
+
+<h2 id="label-Example">Example</h2>
+
+<pre class="code ruby"><code class="ruby">users_controller.find(x) =&gt; User.find(x)
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+60
+61
+62
+63
+64</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_restful_resource_controller.rb', line 60</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_find'>find</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_a'>a</span><span class='rparen'>)</span>
+ <span class='id identifier rubyid_find_before'>find_before</span>
+ <span class='id identifier rubyid_model'>model</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span><span class='lparen'>(</span><span class='id identifier rubyid_a'>a</span><span class='rparen'>)</span>
+ <span class='id identifier rubyid_find_after'>find_after</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
 </table>
-
-		</div>
-
-		<!-- Constants -->
-		
-
-		<!-- Attributes -->
-		
-
-		<!-- Methods -->
-		
-		<div id="public-instance-method-details" class="method-section section">
-			<h3 class="section-header">Public Instance Methods</h3>
-
-		
-			<div id="find-method" class="method-detail ">
-				<a name="M000004"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">find</span><span
-						class="method-args">(*a)</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p>
-Find model records
-</p>
-<h2>Example</h2>
-<pre>
-  users_controller.find(x) =&gt; User.find(x)
-</pre>
-					
-
-					
-					<div class="method-source-code"
-						id="find-source">
-<pre>
-    <span class="ruby-comment cmt"># File lib/sixarm_ruby_restful_resource_controller.rb, line 58</span>
-58:  <span class="ruby-keyword kw">def</span>  <span class="ruby-identifier">find</span><span class="ruby-identifier">find</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">a</span>)
-59:   <span class="ruby-identifier">find_before</span>
-60:   <span class="ruby-identifier">model</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">a</span>)
-61:   <span class="ruby-identifier">find_after</span>
-62:  <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="find-after-method" class="method-detail ">
-				<a name="M000006"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">find_after</span><span
-						class="method-args">()</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p class="missing-docs">(Not documented)</p>
-					
-
-					
-					<div class="method-source-code"
-						id="find-after-source">
-<pre>
-    <span class="ruby-comment cmt"># File lib/sixarm_ruby_restful_resource_controller.rb, line 67</span>
-67:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">find_after</span>
-68:  <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="find-before-method" class="method-detail ">
-				<a name="M000005"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">find_before</span><span
-						class="method-args">()</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p class="missing-docs">(Not documented)</p>
-					
-
-					
-					<div class="method-source-code"
-						id="find-before-source">
-<pre>
-    <span class="ruby-comment cmt"># File lib/sixarm_ruby_restful_resource_controller.rb, line 64</span>
-64:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">find_before</span>
-65:  <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="model-method" class="method-detail ">
-				<a name="M000000"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">model</span><span
-						class="method-args">()</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p>
-Return the controller&#8217;s model
-</p>
-<h2>Example</h2>
-<pre>
-  users_controller.model =&gt; User
-</pre>
-<p>
-Typically this is the first part of the controller&#8217;s singular name.
-</p>
-<p>
-Override this if you want a controller with a nonstandard model
-</p>
-					
-
-					
-					<div class="method-source-code"
-						id="model-source">
-<pre>
-    <span class="ruby-comment cmt"># File lib/sixarm_ruby_restful_resource_controller.rb, line 24</span>
-24:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">model</span>
-25:   <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@model</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">controller_model</span>
-26:  <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="paramkey-method" class="method-detail ">
-				<a name="M000001"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">paramkey</span><span
-						class="method-args">()</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p>
-Return the controller&#8217;s param key for form inputs.
-</p>
-<h2>Example</h2>
-<pre>
-  users_controller.paramkey =&gt; 'user'
-</pre>
-<p>
-Typically this is the controller model name in lowercase.
-</p>
-<p>
-Override this if you want page views with an atypical param key
-</p>
-					
-
-					
-					<div class="method-source-code"
-						id="paramkey-source">
-<pre>
-    <span class="ruby-comment cmt"># File lib/sixarm_ruby_restful_resource_controller.rb, line 39</span>
-39:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">paramkey</span>
-40:   <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@paramkey</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">controller_model_name</span>.<span class="ruby-identifier">downcase</span>
-41:  <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="single-name-method" class="method-detail ">
-				<a name="M000002"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">single_name</span><span
-						class="method-args">()</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p class="missing-docs">(Not documented)</p>
-					
-
-					
-					<div class="method-source-code"
-						id="single-name-source">
-<pre>
-    <span class="ruby-comment cmt"># File lib/sixarm_ruby_restful_resource_controller.rb, line 44</span>
-44:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">single_name</span>
-45:   <span class="ruby-identifier">paramkey</span>
-46:  <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-		</div>
-	
-		<div id="protected-instance-method-details" class="method-section section">
-			<h3 class="section-header">Protected Instance Methods</h3>
-
-		
-			<div id="cloner-method" class="method-detail ">
-				<a name="M000045"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">cloner</span><span
-						class="method-args">()</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p>
-cloner
-</p>
-					
-
-					
-					<div class="method-source-code"
-						id="cloner-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/sixarm_ruby_restful_resource_controller.rb, line 409</span>
-409:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">cloner</span>
-410:   <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span> <span class="ruby-value str">&quot;+cloner&quot;</span>
-411:   <span class="ruby-identifier">id</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value str">'id'</span>]
-412:   <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">id</span> <span class="ruby-keyword kw">then</span> <span class="ruby-identifier">raise</span> <span class="ruby-value str">&quot;id missing&quot;</span> <span class="ruby-keyword kw">end</span>
-413:   <span class="ruby-identifier">a</span> = <span class="ruby-identifier">find_by_id</span>(<span class="ruby-identifier">id</span>)
-414:    <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">a</span> <span class="ruby-keyword kw">then</span> <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;id not found: #{id}&quot;</span> <span class="ruby-keyword kw">end</span>
-415:   <span class="ruby-identifier">a</span> = <span class="ruby-identifier">a</span>.<span class="ruby-identifier">clone</span>
-416:   <span class="ruby-identifier">a</span>.<span class="ruby-identifier">attributes</span>=<span class="ruby-identifier">params</span>[<span class="ruby-identifier">paramkey</span>]
-417:   <span class="ruby-identifier">a</span>
-418:  <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="create-method" class="method-detail ">
-				<a name="M000021"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">create</span><span
-						class="method-args">(*a)</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p>
-create
-</p>
-					
-
-					
-					<div class="method-source-code"
-						id="create-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/sixarm_ruby_restful_resource_controller.rb, line 185</span>
-185:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">create</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">a</span>)
-186:   <span class="ruby-identifier">create_before</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">a</span>)
-187:   <span class="ruby-identifier">a</span> = <span class="ruby-identifier">create_with_params</span>(<span class="ruby-identifier">params</span>)
-188:   <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">a</span>.<span class="ruby-identifier">save</span>
-189:    <span class="ruby-identifier">create_success</span>(<span class="ruby-identifier">a</span>)
-190:   <span class="ruby-keyword kw">else</span>
-191:    <span class="ruby-identifier">create_failure</span>(<span class="ruby-identifier">a</span>)
-192:   <span class="ruby-keyword kw">end</span>
-193:   <span class="ruby-identifier">create_after</span>
-194:   <span class="ruby-identifier">a</span>
-195:  <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="create-after-method" class="method-detail ">
-				<a name="M000023"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">create_after</span><span
-						class="method-args">(*a)</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p class="missing-docs">(Not documented)</p>
-					
-
-					
-					<div class="method-source-code"
-						id="create-after-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/sixarm_ruby_restful_resource_controller.rb, line 204</span>
-204:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">create_after</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">a</span>)
-205:  <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="create-before-method" class="method-detail ">
-				<a name="M000022"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">create_before</span><span
-						class="method-args">(*a)</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p class="missing-docs">(Not documented)</p>
-					
-
-					
-					<div class="method-source-code"
-						id="create-before-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/sixarm_ruby_restful_resource_controller.rb, line 201</span>
-201:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">create_before</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">a</span>)
-202:  <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="create-failure-method" class="method-detail ">
-				<a name="M000026"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">create_failure</span><span
-						class="method-args">(a)</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p class="missing-docs">(Not documented)</p>
-					
-
-					
-					<div class="method-source-code"
-						id="create-failure-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/sixarm_ruby_restful_resource_controller.rb, line 216</span>
-216:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">create_failure</span>(<span class="ruby-identifier">a</span>)
-217:   <span class="ruby-identifier">flash</span>[<span class="ruby-identifier">:notice</span>]=<span class="ruby-identifier">create_failure_message</span>
-218:  <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="create-failure-message-method" class="method-detail ">
-				<a name="M000028"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">create_failure_message</span><span
-						class="method-args">()</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p class="missing-docs">(Not documented)</p>
-					
-
-					
-					<div class="method-source-code"
-						id="create-failure-message-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/sixarm_ruby_restful_resource_controller.rb, line 225</span>
-225:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">create_failure_message</span>
-226:   <span class="ruby-value str">'Create failed.'</span>
-227:  <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="create-success-method" class="method-detail ">
-				<a name="M000025"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">create_success</span><span
-						class="method-args">(a)</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p class="missing-docs">(Not documented)</p>
-					
-
-					
-					<div class="method-source-code"
-						id="create-success-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/sixarm_ruby_restful_resource_controller.rb, line 211</span>
-211:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">create_success</span>(<span class="ruby-identifier">a</span>)
-212:   <span class="ruby-identifier">flash</span>[<span class="ruby-identifier">:notice</span>]=<span class="ruby-identifier">create_success_message</span>(<span class="ruby-identifier">a</span>)
-213:   <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'list'</span>
-214:  <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="create-success-message-method" class="method-detail ">
-				<a name="M000027"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">create_success_message</span><span
-						class="method-args">()</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p class="missing-docs">(Not documented)</p>
-					
-
-					
-					<div class="method-source-code"
-						id="create-success-message-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/sixarm_ruby_restful_resource_controller.rb, line 221</span>
-221:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">create_success_message</span>
-222:   <span class="ruby-value str">'Created.'</span>
-223:  <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="create-with-params-method" class="method-detail ">
-				<a name="M000024"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">create_with_params</span><span
-						class="method-args">()</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p class="missing-docs">(Not documented)</p>
-					
-
-					
-					<div class="method-source-code"
-						id="create-with-params-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/sixarm_ruby_restful_resource_controller.rb, line 207</span>
-207:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">create_with_params</span>
-208:   <span class="ruby-identifier">a</span> = <span class="ruby-identifier">model</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">params</span>[<span class="ruby-identifier">paramkey</span>])
-209:  <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="destroy-method" class="method-detail ">
-				<a name="M000033"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">destroy</span><span
-						class="method-args">()</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p>
-destroy
-</p>
-					
-
-					
-					<div class="method-source-code"
-						id="destroy-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/sixarm_ruby_restful_resource_controller.rb, line 300</span>
-300:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">destroy</span>
-301:   <span class="ruby-identifier">destroy_before</span>
-302:   <span class="ruby-identifier">id</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value str">'id'</span>]
-303: 
-304:   <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">id</span>
-305:    <span class="ruby-identifier">destroy_error_id_is_missing</span>
-306:    <span class="ruby-keyword kw">return</span>
-307:   <span class="ruby-keyword kw">end</span>
-308: 
-309:   <span class="ruby-identifier">a</span> = <span class="ruby-identifier">destroy_find</span>(<span class="ruby-identifier">id</span>)
-310: 
-311:   <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">a</span>
-312:    <span class="ruby-identifier">destroy_error_id_not_found</span>
-313:    <span class="ruby-keyword kw">return</span>
-314:   <span class="ruby-keyword kw">end</span>
-315: 
-316:   <span class="ruby-keyword kw">begin</span>
-317:    <span class="ruby-identifier">a</span>.<span class="ruby-identifier">destroy</span>
-318:    <span class="ruby-identifier">destroy_success</span>
-319:   <span class="ruby-keyword kw">rescue</span>
-320:    <span class="ruby-identifier">destroy_failure</span>
-321:   <span class="ruby-keyword kw">end</span>
-322: 
-323:   <span class="ruby-identifier">destroy_after</span>
-324: 
-325:  <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="destroy-ajax-method" class="method-detail ">
-				<a name="M000043"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">destroy_ajax</span><span
-						class="method-args">()</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p>
-destroy ajax
-</p>
-					
-
-					
-					<div class="method-source-code"
-						id="destroy-ajax-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/sixarm_ruby_restful_resource_controller.rb, line 386</span>
-386:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">destroy_ajax</span>
-387:   <span class="ruby-identifier">id</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value str">'id'</span>]
-388:    <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span> <span class="ruby-node">&quot;+destroy_ajax id=#{id}&quot;</span> 
-389:   <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">id</span> <span class="ruby-keyword kw">then</span> <span class="ruby-identifier">raise</span> <span class="ruby-value str">&quot;id missing&quot;</span> <span class="ruby-keyword kw">end</span>
-390:   <span class="ruby-identifier">a</span> = <span class="ruby-identifier">find_by_id</span>(<span class="ruby-identifier">id</span>)
-391:    <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">a</span> <span class="ruby-keyword kw">then</span> <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;id not found: #{id}&quot;</span> <span class="ruby-keyword kw">end</span>
-392:   <span class="ruby-identifier">a</span>.<span class="ruby-identifier">destroy</span>
-393:   <span class="ruby-identifier">render</span> <span class="ruby-identifier">:text</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">''</span>
-394:   <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span> <span class="ruby-value str">&quot;-destroy_ajax&quot;</span> 
-395:  <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="destroy-error-id-missing-method" class="method-detail ">
-				<a name="M000034"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">destroy_error_id_missing</span><span
-						class="method-args">()</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p class="missing-docs">(Not documented)</p>
-					
-
-					
-					<div class="method-source-code"
-						id="destroy-error-id-missing-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/sixarm_ruby_restful_resource_controller.rb, line 328</span>
-328:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">destroy_error_id_missing</span>
-329:   <span class="ruby-identifier">raise</span> <span class="ruby-value str">&quot;id missing&quot;</span>
-330:  <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="destroy-error-id-not-found-method" class="method-detail ">
-				<a name="M000035"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">destroy_error_id_not_found</span><span
-						class="method-args">(id)</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p class="missing-docs">(Not documented)</p>
-					
-
-					
-					<div class="method-source-code"
-						id="destroy-error-id-not-found-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/sixarm_ruby_restful_resource_controller.rb, line 332</span>
-332:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">destroy_error_id_not_found</span>(<span class="ruby-identifier">id</span>)
-333:   <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;id not found: #{id}&quot;</span>
-334:  <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="destroy-failure-method" class="method-detail ">
-				<a name="M000039"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">destroy_failure</span><span
-						class="method-args">()</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p class="missing-docs">(Not documented)</p>
-					
-
-					
-					<div class="method-source-code"
-						id="destroy-failure-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/sixarm_ruby_restful_resource_controller.rb, line 348</span>
-348:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">destroy_failure</span>
-349:   <span class="ruby-identifier">flash</span>[<span class="ruby-identifier">:warning</span>]=<span class="ruby-identifier">destroy_failure_message</span>
-350:  <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="destroy-failure-message-method" class="method-detail ">
-				<a name="M000040"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">destroy_failure_message</span><span
-						class="method-args">()</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p class="missing-docs">(Not documented)</p>
-					
-
-					
-					<div class="method-source-code"
-						id="destroy-failure-message-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/sixarm_ruby_restful_resource_controller.rb, line 352</span>
-352:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">destroy_failure_message</span>
-353:   <span class="ruby-value str">'Delete failed.'</span>
-354:  <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="destroy-find-method" class="method-detail ">
-				<a name="M000036"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">destroy_find</span><span
-						class="method-args">(*a)</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p class="missing-docs">(Not documented)</p>
-					
-
-					
-					<div class="method-source-code"
-						id="destroy-find-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/sixarm_ruby_restful_resource_controller.rb, line 336</span>
-336:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">destroy_find</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">a</span>)
-337:   <span class="ruby-identifier">model</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">a</span>)
-338:  <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="destroy-many-method" class="method-detail ">
-				<a name="M000041"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">destroy_many</span><span
-						class="method-args">(ids)</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p>
-destroy many
-</p>
-					
-
-					
-					<div class="method-source-code"
-						id="destroy-many-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/sixarm_ruby_restful_resource_controller.rb, line 366</span>
-366:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">destroy_many</span>(<span class="ruby-identifier">ids</span>)
-367:    <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span> <span class="ruby-value str">&quot;+destroy ids=&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">ids</span>.<span class="ruby-identifier">join</span>(<span class="ruby-value str">&quot; &quot;</span>); 
-368:    <span class="ruby-identifier">ids</span>.<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">id</span><span class="ruby-operator">|</span> <span class="ruby-identifier">find_by_id</span>(<span class="ruby-identifier">id</span>).<span class="ruby-identifier">destroy</span> }
-369:    <span class="ruby-identifier">notice</span>(<span class="ruby-identifier">:destroy_success</span>, <span class="ruby-identifier">ids</span>.<span class="ruby-identifier">join</span>(<span class="ruby-value str">&quot; &quot;</span>))
-370:    <span class="ruby-identifier">destroy_next</span>
-371:    <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span> <span class="ruby-value str">&quot;-destroy_many&quot;</span>
-372:  <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="destroy-next-method" class="method-detail ">
-				<a name="M000042"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">destroy_next</span><span
-						class="method-args">()</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p class="missing-docs">(Not documented)</p>
-					
-
-					
-					<div class="method-source-code"
-						id="destroy-next-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/sixarm_ruby_restful_resource_controller.rb, line 374</span>
-374:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">destroy_next</span>
-375:   <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'list'</span>
-376:  <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="destroy-success-method" class="method-detail ">
-				<a name="M000037"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">destroy_success</span><span
-						class="method-args">()</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p class="missing-docs">(Not documented)</p>
-					
-
-					
-					<div class="method-source-code"
-						id="destroy-success-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/sixarm_ruby_restful_resource_controller.rb, line 340</span>
-340:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">destroy_success</span>
-341:   <span class="ruby-identifier">flash</span>[<span class="ruby-identifier">:notice</span>]=<span class="ruby-identifier">destroy_success_message</span>
-342:  <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="destroy-success-message-method" class="method-detail ">
-				<a name="M000038"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">destroy_success_message</span><span
-						class="method-args">()</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p class="missing-docs">(Not documented)</p>
-					
-
-					
-					<div class="method-source-code"
-						id="destroy-success-message-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/sixarm_ruby_restful_resource_controller.rb, line 344</span>
-344:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">destroy_success_message</span>
-345:   <span class="ruby-value str">'Deleted.'</span>
-346:  <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="edit-method" class="method-detail ">
-				<a name="M000029"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">edit</span><span
-						class="method-args">()</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p>
-edit
-</p>
-					
-
-					
-					<div class="method-source-code"
-						id="edit-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/sixarm_ruby_restful_resource_controller.rb, line 236</span>
-236:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">edit</span>
-237:   <span class="ruby-identifier">id</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value str">'id'</span>]
-238:   <span class="ruby-identifier">foreign</span>
-239:   <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">id</span>
-240:   <span class="ruby-keyword kw">when</span> <span class="ruby-value str">&quot;new&quot;</span>,<span class="ruby-value str">&quot;0&quot;</span>,<span class="ruby-keyword kw">nil</span>
-241:    <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">edit_new</span>
-242:   <span class="ruby-keyword kw">else</span>
-243:    <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">edit_id</span>(<span class="ruby-identifier">id</span>)
-244:   <span class="ruby-keyword kw">end</span>  
-245:  <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="edit-id-method" class="method-detail ">
-				<a name="M000031"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">edit_id</span><span
-						class="method-args">(id)</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p class="missing-docs">(Not documented)</p>
-					
-
-					
-					<div class="method-source-code"
-						id="edit-id-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/sixarm_ruby_restful_resource_controller.rb, line 268</span>
-268:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">edit_id</span>(<span class="ruby-identifier">id</span>)
-269:    <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span> <span class="ruby-node">&quot;+edit_id id=#{id}&quot;</span> 
-270:   <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">id</span> <span class="ruby-keyword kw">then</span> <span class="ruby-identifier">raise</span> <span class="ruby-value str">&quot;id missing&quot;</span> <span class="ruby-keyword kw">end</span>
-271:   <span class="ruby-identifier">a</span> = <span class="ruby-identifier">find_by_id</span>(<span class="ruby-identifier">id</span>)
-272:    <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">a</span> <span class="ruby-keyword kw">then</span> <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;id not found: #{id}&quot;</span> <span class="ruby-keyword kw">end</span>
-273:   <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">request</span>.<span class="ruby-identifier">post?</span>
-274:     <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span> <span class="ruby-node">&quot;=edit_id request post id=#{a.id}&quot;</span> 
-275:    <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">a</span>.<span class="ruby-identifier">update_attributes</span>(<span class="ruby-identifier">params</span>[<span class="ruby-identifier">paramkey</span>])
-276:     <span class="ruby-identifier">notice</span>(<span class="ruby-identifier">:update_success</span>)
-277:     <span class="ruby-identifier">edit_next</span>
-278:    <span class="ruby-keyword kw">else</span>
-279:     <span class="ruby-identifier">warning</span>(<span class="ruby-identifier">:update_warning</span>)
-280:    <span class="ruby-keyword kw">end</span>
-281:   <span class="ruby-keyword kw">else</span>
-282:     <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span> <span class="ruby-node">&quot;=edit_id request get id=#{a.id}&quot;</span> 
-283:   <span class="ruby-keyword kw">end</span>
-284:    <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span> <span class="ruby-node">&quot;-edit_id id=#{id}&quot;</span> 
-285:   <span class="ruby-identifier">a</span>
-286:  <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="edit-new-method" class="method-detail ">
-				<a name="M000030"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">edit_new</span><span
-						class="method-args">(a=nil)</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p class="missing-docs">(Not documented)</p>
-					
-
-					
-					<div class="method-source-code"
-						id="edit-new-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/sixarm_ruby_restful_resource_controller.rb, line 248</span>
-248:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">edit_new</span>(<span class="ruby-identifier">a</span>=<span class="ruby-keyword kw">nil</span>)
-249:   <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span> <span class="ruby-node">&quot;+edit id=#{id}&quot;</span> 
-250:   <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span> <span class="ruby-value str">&quot;+edit_new&quot;</span> 
-251:   <span class="ruby-identifier">a</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">model</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">params</span>[<span class="ruby-identifier">paramkey</span>])
-252:   <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">request</span>.<span class="ruby-identifier">post?</span>
-253:     <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span> <span class="ruby-node">&quot;=edit_new request post id=#{a.id}&quot;</span>
-254:    <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">a</span>.<span class="ruby-identifier">save</span>
-255:     <span class="ruby-identifier">notice</span>(<span class="ruby-identifier">:create_success</span>)
-256:     <span class="ruby-identifier">edit_next</span>
-257:    <span class="ruby-keyword kw">else</span>
-258:     <span class="ruby-identifier">warning</span>(<span class="ruby-identifier">:create_warning</span>,<span class="ruby-identifier">a</span>.<span class="ruby-identifier">to_s</span>)
-259:    <span class="ruby-keyword kw">end</span>
-260:   <span class="ruby-keyword kw">else</span>
-261:    <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span> <span class="ruby-value str">&quot;=edit_new request get&quot;</span> 
-262:   <span class="ruby-keyword kw">end</span>
-263:    <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span> <span class="ruby-node">&quot;-edit_new id=#{a.id}&quot;</span> 
-264:   <span class="ruby-identifier">a</span>
-265:  <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="edit-next-method" class="method-detail ">
-				<a name="M000032"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">edit_next</span><span
-						class="method-args">()</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p class="missing-docs">(Not documented)</p>
-					
-
-					
-					<div class="method-source-code"
-						id="edit-next-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/sixarm_ruby_restful_resource_controller.rb, line 289</span>
-289:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">edit_next</span>
-290:   <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'list'</span>
-291:  <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="export-method" class="method-detail ">
-				<a name="M000046"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">export</span><span
-						class="method-args">()</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p>
-export
-</p>
-					
-
-					
-					<div class="method-source-code"
-						id="export-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/sixarm_ruby_restful_resource_controller.rb, line 427</span>
-427:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">export</span>
-428:   <span class="ruby-identifier">send_data_to_csv</span>(<span class="ruby-identifier">exporter_data</span>,<span class="ruby-identifier">exporter_filename</span>)
-429:  <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="exporter-data-method" class="method-detail ">
-				<a name="M000047"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">exporter_data</span><span
-						class="method-args">()</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p class="missing-docs">(Not documented)</p>
-					
-
-					
-					<div class="method-source-code"
-						id="exporter-data-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/sixarm_ruby_restful_resource_controller.rb, line 432</span>
-432:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">exporter_data</span>
-433:   <span class="ruby-identifier">foreign</span>
-434:   <span class="ruby-identifier">build</span>=<span class="ruby-value str">''</span>
-435:   <span class="ruby-identifier">find</span>(<span class="ruby-identifier">:all</span>).<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span>  <span class="ruby-identifier">build</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">exporter_line</span>(<span class="ruby-identifier">x</span>) }
-436:   <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">build</span>
-437:  <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="exporter-fields-method" class="method-detail ">
-				<a name="M000049"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">exporter_fields</span><span
-						class="method-args">(x)</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p class="missing-docs">(Not documented)</p>
-					
-
-					
-					<div class="method-source-code"
-						id="exporter-fields-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/sixarm_ruby_restful_resource_controller.rb, line 446</span>
-446:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">exporter_fields</span> (<span class="ruby-identifier">x</span>)
-447:   <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">to_a</span>
-448:  <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="exporter-filename-method" class="method-detail ">
-				<a name="M000050"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">exporter_filename</span><span
-						class="method-args">()</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p class="missing-docs">(Not documented)</p>
-					
-
-					
-					<div class="method-source-code"
-						id="exporter-filename-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/sixarm_ruby_restful_resource_controller.rb, line 451</span>
-451:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">exporter_filename</span>
-452:   <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">model</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">downcase</span>
-453:  <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="exporter-line-method" class="method-detail ">
-				<a name="M000048"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">exporter_line</span><span
-						class="method-args">(x)</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p class="missing-docs">(Not documented)</p>
-					
-
-					
-					<div class="method-source-code"
-						id="exporter-line-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/sixarm_ruby_restful_resource_controller.rb, line 440</span>
-440:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">exporter_line</span> (<span class="ruby-identifier">x</span>)
-441:   <span class="ruby-identifier">fields</span> = <span class="ruby-identifier">exporter_fields</span>(<span class="ruby-identifier">x</span>)
-442:   <span class="ruby-keyword kw">return</span> <span class="ruby-constant">CSV</span>.<span class="ruby-identifier">generate_line</span>(<span class="ruby-identifier">fields</span>)<span class="ruby-operator">+</span><span class="ruby-value str">&quot;\n&quot;</span>
-443:  <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="index-method" class="method-detail ">
-				<a name="M000009"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">index</span><span
-						class="method-args">(*a)</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p>
-index
-</p>
-					
-
-					
-					<div class="method-source-code"
-						id="index-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/sixarm_ruby_restful_resource_controller.rb, line 116</span>
-116:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">index</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">a</span>)
-117:   <span class="ruby-identifier">index_before</span>(<span class="ruby-identifier">a</span>)
-118:   <span class="ruby-identifier">index_objects</span>(<span class="ruby-identifier">a</span>)
-119:   <span class="ruby-identifier">index_after</span>(<span class="ruby-identifier">a</span>)
-120:  <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="index-after-method" class="method-detail ">
-				<a name="M000012"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">index_after</span><span
-						class="method-args">(*a)</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p class="missing-docs">(Not documented)</p>
-					
-
-					
-					<div class="method-source-code"
-						id="index-after-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/sixarm_ruby_restful_resource_controller.rb, line 129</span>
-129:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">index_after</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">a</span>)
-130:  <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="index-before-method" class="method-detail ">
-				<a name="M000010"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">index_before</span><span
-						class="method-args">(*a)</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p class="missing-docs">(Not documented)</p>
-					
-
-					
-					<div class="method-source-code"
-						id="index-before-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/sixarm_ruby_restful_resource_controller.rb, line 122</span>
-122:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">index_before</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">a</span>)
-123:  <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="index-objects-method" class="method-detail ">
-				<a name="M000011"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">index_objects</span><span
-						class="method-args">(*a)</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p class="missing-docs">(Not documented)</p>
-					
-
-					
-					<div class="method-source-code"
-						id="index-objects-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/sixarm_ruby_restful_resource_controller.rb, line 125</span>
-125:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">index_objects</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">a</span>)
-126:   <span class="ruby-identifier">objects</span>(<span class="ruby-identifier">a</span>)
-127:  <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="new-method" class="method-detail ">
-				<a name="M000017"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">new</span><span
-						class="method-args">(*a)</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p>
-new
-</p>
-					
-
-					
-					<div class="method-source-code"
-						id="new-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/sixarm_ruby_restful_resource_controller.rb, line 162</span>
-162:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">new</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">a</span>)
-163:   <span class="ruby-identifier">new_before</span>(<span class="ruby-identifier">a</span>)
-164:   <span class="ruby-identifier">new_object</span>(<span class="ruby-identifier">a</span>)
-165:   <span class="ruby-identifier">new_after</span>(<span class="ruby-identifier">a</span>)
-166:  <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="new-after-method" class="method-detail ">
-				<a name="M000020"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">new_after</span><span
-						class="method-args">(*a)</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p class="missing-docs">(Not documented)</p>
-					
-
-					
-					<div class="method-source-code"
-						id="new-after-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/sixarm_ruby_restful_resource_controller.rb, line 175</span>
-175:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">new_after</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">a</span>)
-176:  <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="new-before-method" class="method-detail ">
-				<a name="M000018"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">new_before</span><span
-						class="method-args">(*a)</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p class="missing-docs">(Not documented)</p>
-					
-
-					
-					<div class="method-source-code"
-						id="new-before-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/sixarm_ruby_restful_resource_controller.rb, line 168</span>
-168:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">new_before</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">a</span>)
-169:  <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="new-object-method" class="method-detail ">
-				<a name="M000019"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">new_object</span><span
-						class="method-args">(*a)</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p class="missing-docs">(Not documented)</p>
-					
-
-					
-					<div class="method-source-code"
-						id="new-object-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/sixarm_ruby_restful_resource_controller.rb, line 171</span>
-171:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">new_object</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">a</span>)
-172:   <span class="ruby-identifier">model</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">param</span>)
-173:  <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="object-method" class="method-detail ">
-				<a name="M000007"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">object</span><span
-						class="method-args">(*a)</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p>
-Return a record object.
-</p>
-<p>
-This method does what you typically want: model.find(param[:id])
-</p>
-<h2>Example</h2>
-<pre>
-  object =&gt; User.find(param[:id])
-</pre>
-<p>
-To return a custom object, override this method
-</p>
-					
-
-					
-					<div class="method-source-code"
-						id="object-source">
-<pre>
-    <span class="ruby-comment cmt"># File lib/sixarm_ruby_restful_resource_controller.rb, line 91</span>
-91:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">object</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">a</span>)
-92:   <span class="ruby-ivar">@object</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">model</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">param</span>[<span class="ruby-identifier">:id</span>])
-93:  <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="objects-method" class="method-detail ">
-				<a name="M000008"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">objects</span><span
-						class="method-args">(*a)</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p>
-Return a record collection, typically by doing a model find :all with param
-id.
-</p>
-<p>
-This method does what you typically want: model.find(:all)
-</p>
-<h2>Example</h2>
-<pre>
-  objects =&gt; User.find(:all)
-</pre>
-<p>
-To return a custom object, override this method
-</p>
-					
-
-					
-					<div class="method-source-code"
-						id="objects-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/sixarm_ruby_restful_resource_controller.rb, line 105</span>
-105:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">objects</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">a</span>)
-106:   <span class="ruby-ivar">@objects</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">model</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">:all</span>)
-107:  <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="send-data-to-csv-method" class="method-detail ">
-				<a name="M000051"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">send_data_to_csv</span><span
-						class="method-args">(data,filename)</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p class="missing-docs">(Not documented)</p>
-					
-
-					
-					<div class="method-source-code"
-						id="send-data-to-csv-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/sixarm_ruby_restful_resource_controller.rb, line 456</span>
-456:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">send_data_to_csv</span>(<span class="ruby-identifier">data</span>,<span class="ruby-identifier">filename</span>)
-457:   <span class="ruby-identifier">send_data</span> <span class="ruby-identifier">data</span>, <span class="ruby-identifier">:filename</span> =<span class="ruby-operator">&gt;</span>  <span class="ruby-node">&quot;#{filename}.csv&quot;</span>, <span class="ruby-identifier">:type</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'text/plain'</span>
-458:  <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="show-method" class="method-detail ">
-				<a name="M000013"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">show</span><span
-						class="method-args">(*a)</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p>
-show
-</p>
-					
-
-					
-					<div class="method-source-code"
-						id="show-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/sixarm_ruby_restful_resource_controller.rb, line 139</span>
-139:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">show</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">a</span>)
-140:   <span class="ruby-identifier">show_before</span>(<span class="ruby-identifier">a</span>)
-141:   <span class="ruby-identifier">show_object</span>(<span class="ruby-identifier">a</span>)
-142:   <span class="ruby-identifier">show_after</span>(<span class="ruby-identifier">a</span>)
-143:  <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="show-after-method" class="method-detail ">
-				<a name="M000016"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">show_after</span><span
-						class="method-args">(*a)</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p class="missing-docs">(Not documented)</p>
-					
-
-					
-					<div class="method-source-code"
-						id="show-after-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/sixarm_ruby_restful_resource_controller.rb, line 152</span>
-152:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">show_after</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">a</span>)
-153:  <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="show-before-method" class="method-detail ">
-				<a name="M000014"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">show_before</span><span
-						class="method-args">(*a)</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p class="missing-docs">(Not documented)</p>
-					
-
-					
-					<div class="method-source-code"
-						id="show-before-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/sixarm_ruby_restful_resource_controller.rb, line 145</span>
-145:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">show_before</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">a</span>)
-146:  <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="show-object-method" class="method-detail ">
-				<a name="M000015"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">show_object</span><span
-						class="method-args">(*a)</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p class="missing-docs">(Not documented)</p>
-					
-
-					
-					<div class="method-source-code"
-						id="show-object-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/sixarm_ruby_restful_resource_controller.rb, line 148</span>
-148:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">show_object</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">a</span>)
-149:   <span class="ruby-identifier">object</span>(<span class="ruby-identifier">a</span>)
-150:  <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="test-method" class="method-detail ">
-				<a name="M000044"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">test</span><span
-						class="method-args">()</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p class="missing-docs">(Not documented)</p>
-					
-
-					
-					<div class="method-source-code"
-						id="test-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/sixarm_ruby_restful_resource_controller.rb, line 398</span>
-398:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test</span>
-399:  <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-		</div>
-	
-
-	</div>
-
-
-	<div id="rdoc-debugging-section-dump" class="debugging-section">
-	
-		<p>Disabled; run with --debug to generate this.</p>
-	
-	</div>
-
-	<div id="validator-badges">
-		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
-		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
-			Rdoc Generator</a> 1.1.6</small>.</p>
-	</div>
-
-</body>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="find_after-instance_method">
+  
+    #<strong>find_after</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+69
+70</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_restful_resource_controller.rb', line 69</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_find_after'>find_after</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="find_before-instance_method">
+  
+    #<strong>find_before</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+66
+67</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_restful_resource_controller.rb', line 66</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_find_before'>find_before</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="model-instance_method">
+  
+    #<strong>model</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Return the controller&#39;s model</p>
+
+<h2 id="label-Example">Example</h2>
+
+<pre class="code ruby"><code class="ruby">users_controller.model =&gt; User
+</code></pre>
+
+<p>Typically this is the first part of the controller&#39;s singular name.</p>
+
+<p>Override this if you want a controller with a nonstandard model</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+26
+27
+28</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_restful_resource_controller.rb', line 26</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_model'>model</span>
+ <span class='kw'>return</span> <span class='ivar'>@model</span> <span class='op'>||=</span> <span class='id identifier rubyid_controller_model'>controller_model</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="paramkey-instance_method">
+  
+    #<strong>paramkey</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Return the controller&#39;s param key for form inputs.</p>
+
+<h2 id="label-Example">Example</h2>
+
+<pre class="code ruby"><code class="ruby">users_controller.paramkey =&gt; &#39;user&#39;
+</code></pre>
+
+<p>Typically this is the controller model name in lowercase.</p>
+
+<p>Override this if you want page views with an atypical param key</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+41
+42
+43</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_restful_resource_controller.rb', line 41</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_paramkey'>paramkey</span>
+ <span class='kw'>return</span> <span class='ivar'>@paramkey</span> <span class='op'>||=</span> <span class='id identifier rubyid_controller_model_name'>controller_model_name</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="single_name-instance_method">
+  
+    #<strong>single_name</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+46
+47
+48</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_restful_resource_controller.rb', line 46</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_single_name'>single_name</span>
+ <span class='id identifier rubyid_paramkey'>paramkey</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Thu Apr 25 20:21:49 2019 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.19 (ruby-2.6.3).
+</div>
+
+    </div>
+  </body>
 </html>
-
